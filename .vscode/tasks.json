@@ -1,0 +1,90 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++ g++.exe Windows x64 Release",
+			"command": "C:/msys64/mingw64/bin/g++.exe",
+			"args": [
+				// "-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/build/windows/x64/${fileBasenameNoExtension}.exe"
+				// "-mwindows" // argumento para ocultar o console
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compilador: C:/msys64/mingw64/bin/g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++ g++.exe Windows x86 Release",
+			"command": "C:/msys64/mingw32/bin/g++.exe",
+			"args": [
+				// "-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/build/windows/x86/${fileBasenameNoExtension}.exe"
+				// "-mwindows" // argumento para ocultar o console
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compilador: C:/msys64/mingw32/bin/g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++ Linux x64 Release",
+			"command": "/usr/bin/g++",
+			"args": [
+				// "-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/build/linux/x64/${fileBasenameNoExtension}"
+				// "-mwindows" // argumento para ocultar o console
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compilador: /usr/bin/g++"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++ Linux x86 Release",
+			"command": "/usr/bin/g++",
+			"args": [
+				// "-fdiagnostics-color=always",
+				"-m32", // para compilar em 32-bits
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/build/linux/x86/${fileBasenameNoExtension}"
+				// "-mwindows" // argumento para ocultar o console
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compilador: /usr/bin/g++"
+		}
+	]
+}

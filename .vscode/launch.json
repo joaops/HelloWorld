@@ -1,0 +1,92 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Depurar Windows x64",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/build/windows/x64/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "C:/msys64/mingw64/bin",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Habilitar a reformatação automática para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++ g++.exe Windows x64 Release"
+        },
+        {
+            "name": "Depurar Windows x86",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/build/windows/x86/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "C:/msys64/mingw32/bin",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/mingw32/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Habilitar a reformatação automática para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++ g++.exe Windows x86 Release"
+        },
+        {
+            "name": "Depurar Linux x64",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/build/linux/x64/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar a reformatação automática para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ Linux x64 Release",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Depurar Linux x86",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/build/linux/x86/${fileBasenameNoExtension}",
+            "args": ["-m32"],
+            "stopAtEntry": true,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar a reformatação automática para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ Linux x86 Release",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
